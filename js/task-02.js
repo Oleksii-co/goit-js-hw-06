@@ -7,7 +7,7 @@ const ingredients = [
   "Condiments",
 ];
 
-const item = document.getElementById('ingredients');
+const item = document.getElementById("ingredients");
 
 for (const ingredient of ingredients) {
   const liRef = document.createElement("li");
