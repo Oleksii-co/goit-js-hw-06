@@ -9,8 +9,9 @@ const ingredients = [
 
 const item = document.getElementById("ingredients");
 
-for (const ingredient of ingredients) {
+const elements = ingredients.map((ingredient) => {
   const liRef = document.createElement("li");
   liRef.textContent = ingredient;
-  item.append(liRef);
-}
+  return liRef;
+});
+item.append(...elements);

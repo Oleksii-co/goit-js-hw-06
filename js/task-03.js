@@ -13,11 +13,16 @@ const images = [
   },
 ];
 
-const list = document.querySelector(".gallery");
-const item = images.map(
-  (image) => `<li><img srs=${image.url} alt=${image.alt}>`
-);
-list.insertAdjacentHTML("beforeend", item);
+const listEl = document.querySelector('.gallery');
+const createImgEl = images.map(image => {
+  let addEl = listEl.insertAdjacentHTML(
+    "beforeend",
+    `<li><img src=${image.url} alt='${image.alt}'width = 200 height = 150></li>`
+  );
+  return addEl
+})
 
-list.style.display = "flex";
-list.style.gap = "30px";
+
+listEl.style.display = "flex";
+listEl.style.gap = "30px";
+
